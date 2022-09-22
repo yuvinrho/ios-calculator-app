@@ -8,16 +8,18 @@
 import XCTest
 
 final class CalculatorTests: XCTestCase {
-    var sut: CalculatorItemQueue!
+    var sut: CalculatorItemLinkedList!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = CalculatorItemQueue()
+        sut = CalculatorItemLinkedList()
     }
 
     override func tearDownWithError() throws {
         try super.tearDownWithError()
         sut = nil
     }
+    
+    
 
 }

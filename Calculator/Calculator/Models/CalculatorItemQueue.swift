@@ -5,9 +5,15 @@
 //  Created by 노유빈 on 2022/09/19.
 //
 
-class CalculatorItemQueue {
+protocol Queue {
+    func push(_ element: CalculateItem)
+    func pop() -> CalculateItem?
+}
+
+class CalculatorItemQueue: Queue {
     private var enqueue: [CalculateItem] = []
     private var dequeue: [CalculateItem] = []
+    
     var isEmpty: Bool {
         return enqueue.isEmpty && dequeue.isEmpty
     }
